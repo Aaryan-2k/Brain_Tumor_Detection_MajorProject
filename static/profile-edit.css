@@ -1,0 +1,43 @@
+.editable-field {
+    position: relative;
+    margin-bottom: 20px; /* Increase the margin to create space between fields */
+  }
+  
+  .editable-field label {
+    display: inline-block;
+    width: 120px; /* Adjust width as needed */
+    margin-right: 10px; /* Add some gap between label and input */
+  }
+  
+  .editable-field input[type="text"],
+  .editable-field input[type="email"],
+  .editable-field input[type="tel"] {
+    width: calc(100% - 130px); /* Adjust width considering label width and gap */
+  }
+  
+  .editable-field input[type="file"] {
+    width: 100%;
+  }
+  
+  .editable-field .edit-button {
+    position: relative; /* Change to relative positioning */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin to separate the edit button from the value */
+  }
+  
+  .editable-field input.active + .edit-button {
+    display: none;
+  }
+  
+  .editable-field span,
+  .editable-field input[type="text"],
+  .editable-field input[type="email"],
+  .editable-field input[type="tel"] {
+    vertical-align: middle; /* Align elements vertically */
+  }
+.btn{
+    margin-top: 30px;
+    margin-left: 100px;
+}  

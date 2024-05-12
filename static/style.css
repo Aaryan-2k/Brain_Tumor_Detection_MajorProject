@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  #scan-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #scan-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #image{
+    max-width: 200px;
+    max-height: 200px;
+    margin: 20px auto;
+  }
+  .image-pre{
+    max-width: 200px;
+    max-height: 200px;
+    margin: 20px auto;
+    animation: scan-animation 2s infinite linear;
+  }
+  @keyframes scan-animation {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  #scan-now {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  #close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  #close-popup:hover {
+    color: red;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    background-image: url("/static/—Pngtree—doctor\ medical\ health\ smart\ technology_1497812.jpg");
+    background-position-y:65px ;
+    
+  }
+  .full{
+    display: flex;
+    border: 1px solid black;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(1, 37, 61);
+    background-image: url("/static/image-from-rawpixel-id-2291914-jpeg.jpg");
+    background-position:center;
+    background-position-x:-70px ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+  .containerr {
+    background-color: rgb(112, 146,190);
+    width: 220px;
+    margin: 0 auto;
+    padding: 20px;
+    background-position:center ;
+    background-position-y: 20px;
+    background-image: url("/static/image-from-rawpixel-id-2285456-jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position-x: -35px;
+    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+    
+  h1 {
+    color:  rgb(1, 37, 61);;
+    text-align:center;
+    font-size:45px;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+  .upload-btn {
+    display: block;
+    font-size: 20px;
+    font-stretch: expanded;
+    font-weight: 600;
+    width: 350px;
+    margin-left: 25px;
+    padding: 10px;
+    background-color:  rgb(1, 37, 61);;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .upload-btn:hover {
+    background-color: #0056b3;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  .popup img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    background-color: #3f51b5; /* Dark Blue */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-title {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff; /* Change to your desired background color */
+    cursor: pointer;
+  }
+  .profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+  }
+  .profile-dropdown a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  .profile-dropdown a:hover {
+    background-color: #f2f2f2;
+  }
+  

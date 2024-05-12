@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Brain Tumor Detection</title>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-title">Brain Tumor Detection</div>
+    <div class="navbar-links">
+      <a href="/brain">MRI scanner</a>
+      <a href="/reports">View Reports</a>
+      <div class="profile-pic" onclick="toggleProfileDropdown()"></div>
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+  <div class="full">
+    <div class="containerr">
+    </div>
+  <div class="container">
+    <h1>BRAIN TUMOR DETECTION APP</h1>
+    <button class="upload-btn" onclick="openScanPopup()">Detect Now</button>
+    <div id="scan-popup" class="popup">
+      <span class="close-btn" onclick="closeScanPopup()">X</span>
+      <label>Upload:</label><br>
+      <input type="file" accept="image/*" id="image-upload" onchange="previewImage()">
+      <img src="/static/MRI_of_Human_Brain.jpg" id="image">
+      <button id="scan-now" onclick="startAnimation()">Scan Now</button>
+      <h2 id="rest">Result:</h2>
+    </div>
+  </div>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>

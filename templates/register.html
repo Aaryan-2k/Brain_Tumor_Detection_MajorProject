@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Patient Registration</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" class="form" id="myform">
+            <h2>Patient Registration</h2>
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="last-name" placeholder="Last Name" required>
+            <input type="tel" name="phone" placeholder="Contact Number" required>
+            <input type="email" name="email" id="email-id" placeholder="Email" required>
+            <input type="password" name="password" id="p10" placeholder="Password" required>
+            <input type="password" name="cpass" id="p11" placeholder="Confirm Password" required>
+            <p id="123"></p>
+            <button type="submit" onclick="submit_form(event)">Register</button>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </form>
+    </div>
+    <script src="/static/register.js"></script>
+</body>
+</html>
