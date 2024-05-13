@@ -18,9 +18,9 @@ app.secret_key="6A18459CE84EDD817F1D45C49191E"
 @app.route('/', methods=['GET','POST'])
 def home_page():
     if request.method=="GET":
+        if "user" in session:
+            return redirect("/brain")
         return render_template("login.html")
-    if "user" in session:
-        return redirect("/brain")
     email=request.form["email"]
     password=request.form["password"]
     existing_email=users.find_one({'email': email})
