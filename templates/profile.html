@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/sty.css">
   <link rel="stylesheet" href="/static/profile-edit.css"> <!-- New CSS file for profile editing -->
   <title>Edit Profile</title>
 </head>
@@ -20,9 +20,10 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <h1>Edit Profile</h1>
-    <div class="box">
+  <div class="full">
+    <div class="containerr"></div>
+    <div class="cointainer">
+      <h1>Edit Profile</h1>
       <table>
         <tr>
           <td><label for="first-name">First Name:</label></td>
@@ -44,11 +45,11 @@
           <td id="gmail"></td>
         </tr>
       </table>
+      <br>
+      <label for="profile-pic">Change Profile Picture:</label>
+      <input type="file" id="profile-pic" name="profile-pic" accept="image/*"><br>
+      <button class="btn" type="submit">Save Changes</button>
     </div>
-    <br>
-    <label for="profile-pic">Change Profile Picture:</label>
-    <input type="file" id="profile-pic" name="profile-pic" accept="image/*"><br>
-    <button class="btn" type="submit">Save Changes</button>
   </div>
   <script src="/static/profile.js"></script>
 </body>

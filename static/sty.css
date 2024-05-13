@@ -74,7 +74,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    background-image: url("/static/—Pngtree—doctor\ medical\ health\ smart\ technology_1497812.jpg");
     background-position-y:65px ;
     
   }
@@ -90,20 +89,24 @@ body {
     width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-image: url("/static/image-from-rawpixel-id-2291914-jpeg.jpg");
     background-position:center;
     background-position-x:-70px ;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 
   }
+  .container label{
+    margin-left: 5 px;
+  }
+  .container input{
+    margin-left: 6px;
+  }
   .containerr {
-    width: 220px;
+    border-right: 1px solid black;
+    width: 200px;
     margin: 0 auto;
     padding: 20px;
-    background-position:center ;
-    background-position-y: 20px;
-    background-image: url("/static/image-from-rawpixel-id-2285456-jpeg.jpg");
+    background-image: url("/static/Untitled.png");
     background-position: center;
     background-size: cover;
     background-position-x: -35px;
@@ -173,7 +176,7 @@ body {
     top: 0;
     left: 0;
     width: 98%;
-    background-color: #3f51b5; /* Dark Blue */
+    background-color: #3f51b5; 
     padding: 10px 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -201,7 +204,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fff; /* Change to your desired background color */
+    background-color: #fff; 
     cursor: pointer;
   }
   .profile-dropdown {
@@ -223,4 +226,6 @@ body {
   .profile-dropdown a:hover {
     background-color: #f2f2f2;
   }
-  
+  table{
+    margin-left: 5px;
+  }
