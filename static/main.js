@@ -53,7 +53,7 @@ function startAnimation(){
 
         document.getElementById("image").classList.remove("image-pre")
         const res=document.querySelector("#rest")
-        res.innerHTML="Result: Neagative"
+        res.innerHTML="Result: Negative"
         res.style.color="green"
 
     }, 6000);
