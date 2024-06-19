@@ -1,10 +1,12 @@
 from datetime import datetime
 from flask import Flask,render_template,json,request,redirect,make_response,jsonify,session
 from pymongo import MongoClient
-from ml import predict
 from werkzeug.utils import secure_filename
 import os
-
+import tensorflow
+import numpy as np
+from keras.utils import load_img,img_to_array
+model=tensorflow.keras.models.load_model("model/mod.h5")
 app = Flask(__name__,  static_url_path='/static')
 UPLOAD_FOLDER = 'tumor'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -130,7 +132,7 @@ def set_reportss():
     reports.insert_one(data)
     return make_response(jsonify({"success":True}))
 @app.route("/load-api")
-def load_img():
+def load_imgg():
     try:
         data = users.find_one({"email": session["user"]})
         if "img" not in data:
@@ -156,12 +158,14 @@ def uploads_image():
     return jsonify({"message": "File successfully uploaded"}), 200
 @app.route("/prediction")
 def pred():
-    ans=predict()
-    if ans==True:
-        return jsonify({"res":1})
+    img=load_img("tumor/img.jpg",target_size=(64,64))
     
+    img=img_to_array(img)
+    img=np.expand_dims(img, axis = 0)
+    res=model.predict(img)
+    if res[0][0]==1:
+        return jsonify({"res":1})
     else:
         return jsonify({"res":0})
-
 if __name__=="__main__":
     app.run(debug=True)
