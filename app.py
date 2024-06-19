@@ -1,9 +1,13 @@
 from datetime import datetime
 from flask import Flask,render_template,json,request,redirect,make_response,jsonify,session
 from pymongo import MongoClient
-
+from ml import predict
+from werkzeug.utils import secure_filename
+import os
 
 app = Flask(__name__,  static_url_path='/static')
+UPLOAD_FOLDER = 'tumor'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 client = MongoClient('mongodb+srv://aaryantyagi17:vAqL9FKNF7ft52uz@test1.e6kgoi4.mongodb.net/') 
 db = client['brain-tumor-project']  
 users= db['patient-db']
@@ -141,6 +145,23 @@ def load_img():
 def load_user_data():
     data=users.find_one({"email":session["user"]})
     return jsonify({"gmail":data["email"],"fname":data["first-name"],"lname":data["last-name"],"tel":data["phone"]})
+
+@app.route("/machinelearning",methods=["POST"])
+def uploads_image():
+    file = request.files['image']
+    if file:
+        filename = secure_filename("img.jpg")
+        filepath = os.path.join("tumor", filename)
+        file.save(filepath)
+    return jsonify({"message": "File successfully uploaded"}), 200
+@app.route("/prediction")
+def pred():
+    ans=predict()
+    if ans==True:
+        return jsonify({"res":1})
     
+    else:
+        return jsonify({"res":0})
+
 if __name__=="__main__":
     app.run(debug=True)
