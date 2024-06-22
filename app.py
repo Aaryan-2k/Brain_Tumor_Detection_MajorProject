@@ -72,7 +72,7 @@ def get_reports():
 def mri_scan():
     if "user" in session:
         return render_template("index.html")
-    return "session expired! Login again"
+    return render_template("login.html")
 
 
 @app.route("/api-email",methods=['POST'])
@@ -158,7 +158,7 @@ def uploads_image():
     return jsonify({"message": "File successfully uploaded"}), 200
 @app.route("/prediction")
 def pred():
-    img=load_img("tumor/img.jpg",target_size=(64,64))
+    img=load_img("tumor/img.jpg",target_size=(64,6))
     
     img=img_to_array(img)
     img=np.expand_dims(img, axis = 0)
