@@ -71,7 +71,7 @@ def get_reports():
 def mri_scan():
     if "user" in session:
         return render_template("index.html")
-    return redirect("login.html")
+    return redirect('/login')
 
 
 @app.route("/api-email",methods=['POST'])
