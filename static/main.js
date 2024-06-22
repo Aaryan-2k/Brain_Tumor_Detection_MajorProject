@@ -71,6 +71,7 @@ function updateResult(resss,c){
   res.innerHTML = "Result: " + resss;
   res.style.color = c == 1 ? "green" : "red";
   set_data(resss);
+  document.getElementById("image").classList.remove("image-pre");
 }
 async function startAnimation() {
   document.getElementById("image").classList.add("image-pre");
@@ -97,7 +98,6 @@ async function startAnimation() {
   
 setTimeout(()=>{
   fetchPrediction()
-  document.getElementById("image").classList.remove("image-pre");
 },3000)
 }
 
