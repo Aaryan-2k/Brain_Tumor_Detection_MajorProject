@@ -67,12 +67,11 @@ def get_reports():
     else:
         return "You dont have authorization"
 
-
 @app.route("/brain")
 def mri_scan():
     if "user" in session:
         return render_template("index.html")
-    return render_template("login.html")
+    return redirect("login.html")
 
 
 @app.route("/api-email",methods=['POST'])
