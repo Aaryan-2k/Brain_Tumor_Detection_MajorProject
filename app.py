@@ -157,7 +157,7 @@ def uploads_image():
     return jsonify({"message": "File successfully uploaded"}), 200
 @app.route("/prediction")
 def pred():
-    img=load_img("tumor/img.jpg",target_size=(64,6))
+    img=load_img("tumor/img.jpg",target_size=(64,64))
     
     img=img_to_array(img)
     img=np.expand_dims(img, axis = 0)
